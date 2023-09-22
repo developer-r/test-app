@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/currencies', [CurrencyController::class, 'show']);
+Route::get('/currencies/difference', [CurrencyController::class, 'getCurrencyDifference']);
