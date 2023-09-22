@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Jobs\ParseCurrenciesJob;
 use App\Services\CrbService;
-use App\Services\CurrencyService;
 use Illuminate\Console\Command;
 
 class ParseCurrencies extends Command
@@ -19,7 +19,7 @@ class ParseCurrencies extends Command
             $date = now()->subDays($subDays);
             $currencies = app(CrbService::class)->setDate($date)->parse();
 
-            CurrencyService::addCurrenciesToDatabase($date, $currencies);
+            ParseCurrenciesJob::dispatch($date,$currencies)->onQueue('parse_currencies');
         }
     }
 }
