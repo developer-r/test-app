@@ -1,4 +1,4 @@
-##Парсинг валют
+## Парсинг валют
 1. Установить GIT и склонировать репозиторий
 ```
 git clone git@github.com:developer-r/test-app.git
