@@ -65,7 +65,7 @@ class CurrencyRepository
             'name' => $currency?->currency->name,
             'code' => $currency?->currency->char_code,
             'value' => self::format($currency?->value),
-            'differenc' => bcsub(
+            'difference' => bcsub(
                 self::format($currency?->value),
                 self::format($currencyDifferenc?->value),
                 4
