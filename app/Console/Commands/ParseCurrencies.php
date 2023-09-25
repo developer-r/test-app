@@ -19,7 +19,7 @@ class ParseCurrencies extends Command
             $date = now()->subDays($subDays);
             $currencies = app(CrbService::class)->setDate($date)->parse();
 
-            ParseCurrenciesJob::dispatch($date,$currencies)->onQueue('parse_currencies');
+            ParseCurrenciesJob::dispatch($date,$currencies)->onQueue(config('queue.parse_currencies_name'));
         }
     }
 }

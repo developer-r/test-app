@@ -106,4 +106,5 @@ return [
         'table' => 'failed_jobs',
     ],
 
+    'parse_currencies_name' => env('PARSE_CURRENCIES_NAME', 'parse_currencies')
 ];

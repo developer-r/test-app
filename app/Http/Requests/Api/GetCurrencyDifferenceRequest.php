@@ -17,7 +17,7 @@ class GetCurrencyDifferenceRequest extends FormRequest
         if(!$this->input('code'))
         {
             $this->merge([
-                'code' => 'RUR'
+                'code' => config('currency.default_value')
             ]);
         }
     }

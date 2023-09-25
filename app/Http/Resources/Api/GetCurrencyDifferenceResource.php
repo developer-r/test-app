@@ -20,7 +20,7 @@ class GetCurrencyDifferenceResource extends JsonResource
             'name' => Arr::get($this->resource, 'name'),
             'code' => Arr::get($this->resource, 'code'),
             'value' => Arr::get($this->resource,'value'),
-            'differenc' => Arr::get($this->resource, 'differenc'),
+            'difference' => Arr::get($this->resource, 'difference'),
         ];
     }
 }
